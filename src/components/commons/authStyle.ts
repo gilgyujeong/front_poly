@@ -20,3 +20,16 @@ export const LoginTitle = styled.div`
     font-weight: bold;
     margin: 20px;
 `
+export const AuthInput = styled.input`
+    font-size: 15px;
+    width: 300px;
+    height: 35px;
+    padding: 15px;
+`
+
+export const InputBox = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+`
