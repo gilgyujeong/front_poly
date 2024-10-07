@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Avatar, Card } from 'antd';
+import { Avatar, Card, Button } from 'antd';
 import { PlusCircleOutlined } from '@ant-design/icons';
 
 export const MainBox = styled.div`
@@ -43,4 +43,23 @@ export const BoardWriteButton = styled(PlusCircleOutlined)`
     font-size: 40px;
     bottom: 100px;
     right: 30px;
+`
+
+export const BoardCategoryBox = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+`
+
+export const BoardCategoryButton = styled(Button)`
+    /* border: none;
+    text-decoration: underline; */
+    font-size: 15px;
+    font-weight: bold;
+    color: #003366;
+    background-color: #ffffff;
 `
