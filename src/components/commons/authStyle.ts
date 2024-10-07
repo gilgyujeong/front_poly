@@ -2,9 +2,10 @@ import styled from "@emotion/styled";
 
 export const PageSize = styled.div`
     width: 360px;
-    /* height: 740px; */
-    margin: auto;
+    height: 720px;
+    margin: 0 auto;
     /* border: 1px solid black; */
+    background-color: #e9e9e7;
     
 `
 export const LoginImg = styled.img`

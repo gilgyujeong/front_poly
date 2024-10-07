@@ -5,7 +5,7 @@ import * as S from './loginStyles'
 
 export default function LoginPresenter(props: any):JSX.Element {
     return (
-        <AS.PageSize style={{backgroundColor: '#e9e9e7'}}>
+        <AS.PageSize>
             <AS.LoginImg src="img/img1.jpg" />
             <AS.LoginTitle>가는김에 로그인</AS.LoginTitle>
             <S.InputBox>
