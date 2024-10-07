@@ -3,12 +3,13 @@ import Image from "next/image";
 import * as AS from '../src/components/commons/authStyle'
 import FooterPresenter from "../src/components/units/footer/footer.presenter";
 import HeaderContainer from "../src/components/units/header/header.container";
+import MainPageContainer from "../src/components/units/mainpage/mainpage.container";
 
 export default function Home() {
   return (
-    <AS.PageSize style={{ backgroundColor: '#e6f7ff' }}>
+    <AS.PageSize>
       <HeaderContainer />
-      <div style={{ margin: '10px auto'}}>메인 페이지</div>
+      <MainPageContainer />
       <FooterPresenter />
     </AS.PageSize>
   );

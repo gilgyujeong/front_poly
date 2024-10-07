@@ -8,6 +8,9 @@ export const HeaderBox = styled.div`
     height: 60px;
     background-color: #d1e0e5;
     padding: 5px;
+    position: fixed;
+    top: 0px;
+    z-index: 3;
 `
 
 export const LocationInfo = styled.div`

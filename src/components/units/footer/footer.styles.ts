@@ -7,6 +7,8 @@ export const FooterBox = styled.div`
     justify-content: space-between;
     width: 360px;
     background-color: #d1e0e5;
+    position: fixed;
+    bottom: 0px;
 `
 
 export const IconBox = styled.span`

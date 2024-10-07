@@ -1,4 +1,4 @@
-import * as S from './header.style'
+import * as S from './header.styles'
 
 export default function HeaderPresenter(props: any) {
     return (

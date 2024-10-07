@@ -1,11 +1,11 @@
 import { HomeOutlined, SearchOutlined, UserOutlined, EnvironmentOutlined, CommentOutlined } from "@ant-design/icons"
 import * as S from './footer.styles'
 
-export default function FooterPresenter() {
+export default function FooterPresenter(props: any) {
     return (
         <S.FooterBox>
             <S.IconBox>
-                <S.HomeButton />
+                <S.HomeButton onClick={props.onClickHome} />
             </S.IconBox>
             <S.IconBox>
                 <S.LocationButton />
