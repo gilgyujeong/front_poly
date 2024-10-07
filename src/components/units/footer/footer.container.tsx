@@ -7,7 +7,19 @@ export default function FooterContainer() {
         router.push('/')
     }
 
+    const onClickProfile = () => {
+        router.push('/profile/1')
+    }
+
+    const onClickChat = () => {
+        router.push('/chat/1')
+    }
+
     return (
-        <FooterPresenter onClickHome={onClickHome} />
+        <FooterPresenter 
+            onClickHome={onClickHome} 
+            onClickProfile={onClickProfile} 
+            onClickChat={onClickChat} 
+        />
     )
 }

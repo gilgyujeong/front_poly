@@ -5,7 +5,7 @@ export const FooterBox = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 360px;
+    width: 100%;
     background-color: #d1e0e5;
     position: fixed;
     bottom: 0px;

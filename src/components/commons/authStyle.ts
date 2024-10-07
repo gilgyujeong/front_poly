@@ -1,13 +1,14 @@
 import styled from "@emotion/styled";
 
 export const PageSize = styled.div`
-    width: 360px;
+    width: 100%;
     height: 720px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     /* border: 1px solid black; */
     background-color: #e9e9e7;
     
 `
+
 export const LoginImg = styled.img`
     display: block;
     width: 250px;

@@ -4,7 +4,7 @@ export const HeaderBox = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 360px;
+    width: 100%;
     height: 60px;
     background-color: #d1e0e5;
     padding: 5px;

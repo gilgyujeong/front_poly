@@ -14,10 +14,10 @@ export default function FooterPresenter(props: any) {
                 <S.SearchButton />
             </S.IconBox>
             <S.IconBox>
-                <S.ChatButton />
+                <S.ChatButton onClick={props.onClickChat} />
             </S.IconBox>
             <S.IconBox>
-                <S.UserButton />
+                <S.UserButton onClick={props.onClickProfile} />
             </S.IconBox>
         </S.FooterBox>
         

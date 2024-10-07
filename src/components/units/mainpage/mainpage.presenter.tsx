@@ -25,7 +25,6 @@ export default function MainPagePresenter(props: any) {
                 />
             </S.Board>
             <S.Board
-                style={{ width: 300 }}
                 cover={
                 <img
                     alt="example"
@@ -44,7 +43,6 @@ export default function MainPagePresenter(props: any) {
                 />
             </S.Board>
             <S.Board
-                style={{ width: 300 }}
                 cover={
                 <img
                     alt="example"
