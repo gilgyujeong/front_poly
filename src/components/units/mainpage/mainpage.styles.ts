@@ -17,6 +17,12 @@ export const Board = styled(Card)`
     margin: 10px 0;
     width: 300px;
 
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
     .ant-card-meta{
         display: flex;
         flex-direction: row;
