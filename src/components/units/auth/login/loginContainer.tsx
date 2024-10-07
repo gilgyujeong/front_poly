@@ -8,7 +8,11 @@ export default function LoginContainer() {
         router.push('/signUp')
     }
 
+    const onClickCancel = () => {
+        router.push('/')
+    }
+
     return (
-        <LoginPresenter onClickSignUp={onClickSingUp} />
+        <LoginPresenter onClickSignUp={onClickSingUp} onClickCancel={onClickCancel} />
     )
 }

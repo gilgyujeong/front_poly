@@ -18,7 +18,7 @@ export default function LoginPresenter(props: any):JSX.Element {
                 <Button type="primary" style={{ width: '300px'}}>로그인</Button>
             </S.InputBox>
             <S.InputBox>
-                <Button style={{ width: '300px' }}>취소</Button>
+                <Button style={{ width: '300px' }} onClick={props.onClickCancel}>취소</Button>
             </S.InputBox>
             <S.RouterBox>
                 <S.SignUpA onClick={props.onClickSignUp}>회원가입하러 가기</S.SignUpA>
