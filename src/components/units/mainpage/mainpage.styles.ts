@@ -4,7 +4,7 @@ import { PlusCircleOutlined } from '@ant-design/icons';
 
 export const MainBox = styled.div`
     background-color: #e6f7ff;
-    width: 360px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

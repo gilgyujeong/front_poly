@@ -2,7 +2,6 @@ import * as AS from "../../../commons/authStyle";
 import { Button } from "antd";
 import * as S from './loginStyles'
 
-
 export default function LoginPresenter(props: any):JSX.Element {
     return (
         <AS.PageSize>
