@@ -6,6 +6,11 @@ const { Meta } = Card;
 export default function MainPagePresenter(props: any) {
     return (
         <S.MainBox>
+            <S.BoardCategoryBox>
+                <S.BoardCategoryButton type="primary">전체</S.BoardCategoryButton>
+                <S.BoardCategoryButton type="primary">요청하기</S.BoardCategoryButton>
+                <S.BoardCategoryButton type="primary">요청받기</S.BoardCategoryButton>
+            </S.BoardCategoryBox>
             <S.Board
                 cover={
                 <img
