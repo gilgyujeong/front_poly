@@ -7,39 +7,40 @@ interface FooterPresenterProps {
     onClickHome: () => void;
     onClickProfile: () => void;
     onClickChat: () => void;
+    onClickLocation: () => void;
     isModalOpen: boolean;
-    showModal: () => void;
-    handleOk: () => void;
-    handleCancel: () => void;
+    toggleSearchModal: () => void;
 }
 
 export default function FooterPresenter(props: FooterPresenterProps) {
 
     return (
         <S.FooterBox>
+            {props.isModalOpen && (
             <Modal 
                 title="검색" 
                 open={props.isModalOpen} 
-                onCancel={props.handleCancel}
+                onCancel={props.toggleSearchModal}
                 footer={[
-                    <Button key="cancel" onClick={props.handleOk} type="primary">
+                    <Button key="cancel" onClick={props.toggleSearchModal} type="primary">
                         검색
                     </Button>,
-                    <Button key="cancel" onClick={props.handleCancel}>
+                    <Button key="cancel" onClick={props.toggleSearchModal}>
                         닫기
                     </Button>,
                 ]}
                 >
                 <Input placeholder="검색할 내용을 입력해주세요." prefix={<SearchOutlined />} />
             </Modal>
+            )}
             <S.IconBox>
                 <S.HomeButton onClick={props.onClickHome} />
             </S.IconBox>
             <S.IconBox>
-                <S.LocationButton />
+                <S.LocationButton onClick={props.onClickLocation} />
             </S.IconBox>
             <S.IconBox>
-                <S.SearchButton onClick={props.showModal} />
+                <S.SearchButton onClick={props.toggleSearchModal} />
             </S.IconBox>
             <S.IconBox>
                 <S.ChatButton onClick={props.onClickChat} />

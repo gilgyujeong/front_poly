@@ -1,26 +1,18 @@
 import { useRouter } from "next/router";
 import FooterPresenter from "./footer.presenter";
-import { Modal } from 'antd';
 import { useState } from "react";
+import useGeolocation from "react-hook-geolocation";
 
 export default function FooterContainer() {
     const router = useRouter()
+    const geolocation = useGeolocation();
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const showModal = () => {
-        setIsModalOpen(true);
-      };
+    const toggleSearchModal = () => {
+        setIsModalOpen((prev) => !prev);
+    };
     
-      const handleOk = () => {
-        setIsModalOpen(false);
-      };
-    
-      const handleCancel = () => {
-        setIsModalOpen(false);
-      };
-
-
     const onClickHome = () => {
         router.push('/')
     }
@@ -33,17 +25,20 @@ export default function FooterContainer() {
         router.push('/chat/1')
     }
 
-
-
+    const onClickLocation = () => {
+        if (!geolocation.error) {
+            alert(`위도: ${geolocation.latitude} 경도: ${geolocation.longitude}`)
+        }
+    }
+    
     return (
         <FooterPresenter 
             onClickHome={onClickHome} 
             onClickProfile={onClickProfile} 
             onClickChat={onClickChat}
+            onClickLocation={onClickLocation}
             isModalOpen={isModalOpen}
-            showModal={showModal}
-            handleOk={handleOk}
-            handleCancel={handleCancel}
+            toggleSearchModal={toggleSearchModal}
         />
     )
 }
