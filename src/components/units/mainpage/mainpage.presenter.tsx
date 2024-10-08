@@ -13,7 +13,7 @@ export default function MainPagePresenter(props: any) {
             </S.BoardCategoryBox>
             <S.Board
                 cover={
-                <img
+                <img onClick={props.onClickBoardDetail}
                     alt="example"
                     src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
                 />

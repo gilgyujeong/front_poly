@@ -30,4 +30,3 @@ export const InputBox = styled.div`
 export const BoardButton = styled(Button)`
     width: 300px;
 `
-
