@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Avatar, Card, Button } from 'antd';
+import { Avatar, Card, Button, Radio } from 'antd';
 import { PlusCircleOutlined } from '@ant-design/icons';
 
 export const MainBox = styled.div`
@@ -62,4 +62,9 @@ export const BoardCategoryButton = styled(Button)`
     font-weight: bold;
     color: #003366;
     background-color: #ffffff;
+`
+
+export const RadioButton = styled(Radio.Group)`
+    margin-top: 10px;
+    width: 300px;
 `

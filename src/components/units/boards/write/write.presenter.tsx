@@ -1,6 +1,5 @@
 import { Input, Radio } from 'antd'
 import * as S from './write.style'
-import { PlusOutlined } from '@ant-design/icons'
 import TextArea from 'antd/es/input/TextArea';
 
 export default function WritePresenter(props: any) {

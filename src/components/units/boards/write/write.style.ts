@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Button, Upload } from "antd";
+import { Button, Radio, Upload } from "antd";
 
 export const MainBox = styled.div`
     background-color: #e6f7ff;
