@@ -15,22 +15,28 @@ export const HeaderBox = styled.div`
 
 export const LocationInfo = styled.div`
     text-align: center;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
+    margin: 3%;
 `
 
 export const LoginButton = styled.div`
     text-align: center;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
-    margin-left: 150px;
+    margin-left: 28%;
     cursor: pointer;
 `
 
 export const SignUpButton = styled.div`
     text-align: center;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
-    margin-left: 10px;
+    margin-left: 5%;
     cursor: pointer;
+`
+
+export const ImageBox = styled.img`
+    width: 40px;
+    height: 40px;
 `

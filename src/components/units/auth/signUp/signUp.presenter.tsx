@@ -1,5 +1,5 @@
 import * as AS from "../../../commons/authStyle";
-import { Button } from "antd";
+import { Button, Input } from "antd";
 
 export default function SignUpPresenter(props: any) {
 
@@ -8,16 +8,16 @@ export default function SignUpPresenter(props: any) {
             <AS.LoginImg src="img/img1.jpg" />
             <AS.LoginTitle>가는김에 회원가입</AS.LoginTitle>
             <AS.InputBox>
-                <AS.AuthInput placeholder="아이디를 입력해주세요" type="text" />
+                <Input placeholder='아이디를 입력해주세요.' type="text"></Input>
             </AS.InputBox>
             <AS.InputBox>
-                <AS.AuthInput placeholder="비밀번호를 입력해주세요" type="password" />
+                <Input placeholder="비밀번호를 입력해주세요" type="password" />
             </AS.InputBox>
             <AS.InputBox>
-                <AS.AuthInput placeholder="비밀번호를 다시 입력해주세요" type="password" />
+                <Input placeholder="비밀번호를 다시 입력해주세요" type="password" />
             </AS.InputBox>
             <AS.InputBox>
-                <AS.AuthInput placeholder="이메일을 입력해주세요" />
+                <Input placeholder="이메일을 입력해주세요" />
             </AS.InputBox>
             <AS.InputBox>
                 <Button type="primary" style={{ width: '300px'}}>회원가입</Button>

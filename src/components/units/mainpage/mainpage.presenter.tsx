@@ -24,7 +24,8 @@ export default function MainPagePresenter(props: any) {
             >
                 <Meta
                 avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />}
-                title="Board title"
+                title={props.data.title}
+                description='10000원'
                 />
             </S.Board>
             <S.Board
@@ -42,7 +43,8 @@ export default function MainPagePresenter(props: any) {
             >
                 <Meta
                 avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />}
-                title="Board title"
+                title={props.data.title}
+                description='10000원'
                 />
             </S.Board>
             <S.Board
@@ -60,7 +62,8 @@ export default function MainPagePresenter(props: any) {
             >
                 <Meta
                 avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />}
-                title="Board title"
+                title={props.data.title}
+                description='10000원'
                 />
             </S.Board>
             <S.BoardWriteButton onClick={props.onClickBoardsNewButton} />

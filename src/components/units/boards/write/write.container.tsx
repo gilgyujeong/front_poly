@@ -2,6 +2,7 @@ import { useState } from "react";
 import WritePresenter from "./write.presenter";
 import { message, type GetProp, type UploadProps} from 'antd'
 import { LoadingOutlined, PlusOutlined } from "@ant-design/icons";
+import { useRouter } from "next/router";
 
 type FileType = Parameters<GetProp<UploadProps, 'beforeUpload'>>[0];
 
@@ -25,6 +26,8 @@ const beforeUpload = (file: FileType) => {
 };
 
 export default function WriteContainer() {
+    const router = useRouter()
+
     const [loading, setLoading] = useState(false);
     const [imageUrl, setImageUrl] = useState<string>();
 
@@ -53,6 +56,10 @@ export default function WriteContainer() {
         { label: '해줄게요', value: '해줄게요' }
     ];
 
+    const onClickBack = () => {
+        router.push('/');
+    }
+
     return(
         <WritePresenter 
             uploadButton={uploadButton}
@@ -60,6 +67,7 @@ export default function WriteContainer() {
             beforeUpload={beforeUpload}
             handleChange={handleChange}
             options={options}
+            onClickBack={onClickBack}
         />
     )
 }
