@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Image, Carousel } from "antd";
+import { Image, Carousel, Button } from "antd";
 
 export const MainBox = styled.div`
     background-color: #e6f7ff;
@@ -14,11 +14,10 @@ export const MainBox = styled.div`
 
 export const InputBox = styled.div`
     width: 300px;
-    margin: 10px;
+    margin: 5px;
     display: flex;
     flex-direction: row;
     align-items: center;
-   
 `
 
 export const BoardImage = styled(Image)`
@@ -42,4 +41,45 @@ export const Nickname = styled.span`
 export const Price = styled.span`
     font-size: 13px;
     margin-left: 160px;
+`
+export const Line = styled.hr`
+    border-top: 2px solid black;
+    width: 280px;
+`
+
+export const ContentsBox = styled.div`
+    width: 300px;
+    height: 130px;
+    font-size: 13px;
+    padding: 10px;
+    margin-top: 15px;
+    border: 2px solid lightblue;
+    background-color: white;
+`
+
+export const DateBox = styled.div`
+    width: 300px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 4px 10px;
+    border: 2px solid lightblue;
+    background-color: white;
+`
+
+export const LocationBox = styled.div`
+    width: 300px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 4px 10px;
+    border: 2px solid lightblue;
+    background-color: white;
+`
+
+export const BoardButton = styled(Button)`
+    width: 300px;
+    margin-top: 15px;
 `
