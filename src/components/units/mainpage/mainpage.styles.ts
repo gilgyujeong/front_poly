@@ -30,7 +30,18 @@ export const Board = styled(Card)`
     }
 
     .ant-card-meta-title {
-        font-size: 18px;
+        font-size: 13px;
+        font-weight: bold;
+        color: #333;
+        
+    }
+    .ant-card-body {
+        padding: 18px;
+    }
+
+    .ant-card-meta-description {
+        font-size: 12px;
+        text-align: end;
         color: #333;
 
     }

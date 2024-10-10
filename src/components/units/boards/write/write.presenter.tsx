@@ -1,6 +1,16 @@
-import { Input, Radio } from 'antd'
+import { Input, Radio, UploadProps } from 'antd'
 import * as S from './write.style'
 import TextArea from 'antd/es/input/TextArea';
+import { ReactNode } from 'react';
+
+interface IWritePresenterProps {
+    uploadButton: ReactNode,
+    imageUrl?: string,
+    beforeUpload: (file: File) => boolean,
+    handleChange: UploadProps['onChange'],
+    options: {label: string, value: string}[],
+    onClickBack: () => void
+}
 
 export default function WritePresenter(props: any) {
 
@@ -48,7 +58,7 @@ export default function WritePresenter(props: any) {
                 <S.BoardButton type="primary">등록</S.BoardButton>
             </S.InputBox>
             <S.InputBox>
-                <S.BoardButton>취소</S.BoardButton>
+                <S.BoardButton onClick={props.onClickBack}>취소</S.BoardButton>
             </S.InputBox>
         </S.MainBox>
         

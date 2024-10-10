@@ -3,6 +3,9 @@ import styled from "@emotion/styled";
 export const PageSize = styled.div`
     width: 100%;
     height: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /* margin: 0 auto; */
     /* border: 1px solid black; */
     background-color: #e9e9e7;
@@ -30,8 +33,6 @@ export const AuthInput = styled.input`
 `
 
 export const InputBox = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 10px;
+    width: 300px;
+    margin-bottom: 13px;
 `

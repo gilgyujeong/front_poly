@@ -1,9 +1,7 @@
 import styled from "@emotion/styled";
 
 export const InputBox = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    width: 300px;
     margin-bottom: 10px;
 `
 
@@ -29,7 +27,7 @@ export const SignUpA = styled.button`
 
 export const RouterBox = styled.div`
     display: flex;
+    width: 300px;
     flex-direction: row;
     justify-content: flex-end;
-    margin-right: 30px;
 `

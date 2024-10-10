@@ -1,5 +1,5 @@
 import * as AS from "../../../commons/authStyle";
-import { Button } from "antd";
+import { Button, Input } from "antd";
 import * as S from './loginStyles'
 
 export default function LoginPresenter(props: any):JSX.Element {
@@ -8,10 +8,10 @@ export default function LoginPresenter(props: any):JSX.Element {
             <AS.LoginImg src="img/img1.jpg" />
             <AS.LoginTitle>가는김에 로그인</AS.LoginTitle>
             <S.InputBox>
-                <S.LoginInput placeholder="아이디를 입력해주세요." type="text"/>
+                <Input placeholder='아이디를 입력해주세요.'></Input>
             </S.InputBox>
             <S.InputBox>
-                <S.LoginInput placeholder="비밀번호를 입력해주세요." type="password"/>
+                <Input placeholder='비밀번호를 입력해주세요.' type="password"></Input>
             </S.InputBox>
             <S.InputBox>
                 <Button type="primary" style={{ width: '300px'}}>로그인</Button>
