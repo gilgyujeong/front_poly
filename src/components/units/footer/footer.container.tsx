@@ -22,12 +22,13 @@ export default function FooterContainer() {
     }
 
     const onClickChat = () => {
-        router.push('/chat/1')
+        router.push('/chat')
     }
 
     const onClickLocation = () => {
         if (!geolocation.error) {
-            alert(`위도: ${geolocation.latitude} 경도: ${geolocation.longitude}`)
+            // alert(`위도: ${geolocation.latitude} 경도: ${geolocation.longitude}`)
+            router.push('/kakaoMap')
         }
     }
     

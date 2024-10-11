@@ -4,7 +4,11 @@ import ChatPresenter from "./chat.presenter";
 export default function ChatContainer() {
     const router = useRouter()
     
+    const onClickChatDetail = () => {
+        router.push('/chat/1')
+    }
+
     return (
-        <ChatPresenter />
+        <ChatPresenter onClickChatDetail={onClickChatDetail} />
     )
 }
