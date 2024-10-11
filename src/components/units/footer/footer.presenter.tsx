@@ -22,7 +22,7 @@ export default function FooterPresenter(props: FooterPresenterProps) {
                 open={props.isModalOpen} 
                 onCancel={props.toggleSearchModal}
                 footer={[
-                    <Button key="cancel" onClick={props.toggleSearchModal} type="primary">
+                    <Button key="search" onClick={props.toggleSearchModal} type="primary">
                         검색
                     </Button>,
                     <Button key="cancel" onClick={props.toggleSearchModal}>

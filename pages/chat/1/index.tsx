@@ -1,10 +1,10 @@
 import Layout from "../../../src/components/commons/layout/layout";
-import ChatContainer from "../../../src/components/units/chat/chat.container";
+import ChatDetailContainer from "../../../src/components/units/chat/detail/chat.detail.container";
 
-export default function ChatPage() {
+export default function ChatDetailPage() {
     return (
         <Layout>
-            <ChatContainer />
+            <ChatDetailContainer />
         </Layout>
     )
 }
