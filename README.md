@@ -2,4 +2,4 @@
 
 ## 활용기술
 
-### react, typescript, emotion
+### react, typescript, emotion, antd, KakaoMap
