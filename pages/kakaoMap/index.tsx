@@ -1,7 +1,10 @@
-import KakaoMap from "../../src/components/units/kakaomap/kakaomap";
+import Layout from "../../src/components/commons/layout/layout";
+import KakaoMap from "../../src/components/units/kakaomap/kakaomap.container";
 
 export default function KakaoMapPage() {
     return (
-        <KakaoMap />
+        <Layout>
+            <KakaoMap />
+        </Layout>
     )
 }
