@@ -33,6 +33,8 @@ export default function WriteContainer() {
     const [loading, setLoading] = useState(false);
     const [imageUrl, setImageUrl] = useState<string>();
     const [amPm, setAmPm] = useState(1);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [address, setAddress] = useState<string>('')
 
     const handleChange: UploadProps['onChange'] = (info) => {
         if (info.file.status === 'uploading') {
@@ -85,6 +87,15 @@ export default function WriteContainer() {
         console.log(date, dateString);
     };
 
+    const togglesAddressModal = () => {
+        setIsModalOpen((prev) => !prev);
+    }
+
+    const addressInput = (data: any) => {
+        setAddress(data.address);
+        togglesAddressModal();
+    }
+
     return(
         selectedOption === '해주세요' ?
         <WritePresenter 
@@ -100,6 +111,10 @@ export default function WriteContainer() {
             onChangeMin={onChangeMin}
             onChangeOption={onChangeOption}
             onChangDate={onChangDate}
+            togglesAddressModal={togglesAddressModal}
+            isModalOpen={isModalOpen}
+            addressInput={addressInput}
+            address={address}
         /> :
         <DiffWritePresenter
             onChangeOption={onChangeOption}

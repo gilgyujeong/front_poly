@@ -1,7 +1,8 @@
-import { Input, Radio, RadioChangeEvent, Select, UploadProps } from 'antd'
+import { Input, Modal, Radio, RadioChangeEvent, Select, UploadProps } from 'antd'
 import * as S from './write.style'
 import TextArea from 'antd/es/input/TextArea';
 import { ReactNode } from 'react';
+import DaumPostcodeEmbed from 'react-daum-postcode';
 
 interface IWritePresenterProps {
     uploadButton: ReactNode,
@@ -94,7 +95,7 @@ export default function WritePresenter(props: any) {
             <S.InputDate onChange={props.onChangDate} placeholder='거래희망 날짜' />
             </S.InputBox>
             <S.InputBox>
-                <Input placeholder='거래 지역'></Input>
+                <Input onClick={props.togglesAddressModal} placeholder='거래 지역' value={props.address}></Input>
             </S.InputBox>
             <S.InputBox>
                 <S.BoardButton type="primary">등록</S.BoardButton>
@@ -102,7 +103,11 @@ export default function WritePresenter(props: any) {
             <S.InputBox>
                 <S.BoardButton onClick={props.onClickBack}>취소</S.BoardButton>
             </S.InputBox>
+            {props.isModalOpen && (
+                <Modal open={true} onOk={props.togglesAddressModal} onCancel={props.togglesAddressModal}>
+                    <DaumPostcodeEmbed onComplete={props.addressInput} />
+                </Modal>
+            )}
         </S.MainBox>
-        
     )
 }
