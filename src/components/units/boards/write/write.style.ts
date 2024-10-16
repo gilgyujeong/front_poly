@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Button, Radio, Upload } from "antd";
+import { Button, DatePicker, Radio, Upload } from "antd";
 
 export const MainBox = styled.div`
     background-color: #e6f7ff;
@@ -19,14 +19,24 @@ export const ImgBox = styled.div`
 `
 
 export const ImgInput = styled(Upload)`
-    margin: 15px;
+    margin: 10px;
 `
 
 export const InputBox = styled.div`
     width: 300px;
-    margin: 10px;
+    margin: 7px;
 `
 
 export const BoardButton = styled(Button)`
+    width: 300px;
+`
+
+export const TimeBox = styled.div`
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 5px;
+`
+
+export const InputDate = styled(DatePicker)`
     width: 300px;
 `

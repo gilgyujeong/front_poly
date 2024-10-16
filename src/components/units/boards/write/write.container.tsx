@@ -1,8 +1,9 @@
 import { useState } from "react";
 import WritePresenter from "./write.presenter";
-import { message, type GetProp, type UploadProps} from 'antd'
+import { DatePickerProps, message, RadioChangeEvent, type GetProp, type UploadProps} from 'antd'
 import { LoadingOutlined, PlusOutlined } from "@ant-design/icons";
 import { useRouter } from "next/router";
+import DiffWritePresenter from "./diffwrite.presenter";
 
 type FileType = Parameters<GetProp<UploadProps, 'beforeUpload'>>[0];
 
@@ -28,8 +29,10 @@ const beforeUpload = (file: FileType) => {
 export default function WriteContainer() {
     const router = useRouter()
 
+    const [selectedOption, setSelectedOption] = useState('해주세요');
     const [loading, setLoading] = useState(false);
     const [imageUrl, setImageUrl] = useState<string>();
+    const [amPm, setAmPm] = useState(1);
 
     const handleChange: UploadProps['onChange'] = (info) => {
         if (info.file.status === 'uploading') {
@@ -51,6 +54,11 @@ export default function WriteContainer() {
         </button>
     );
 
+    const onChangeOption = (event: RadioChangeEvent): void => {
+        console.log('Selected Value:', event.target.value);
+        setSelectedOption(event.target.value);
+    }
+
     const options = [
         { label: '해주세요', value: '해주세요' },
         { label: '해줄게요', value: '해줄게요' }
@@ -60,7 +68,25 @@ export default function WriteContainer() {
         router.push('/');
     }
 
+    const onChangeAmPm = (e: RadioChangeEvent) => {
+        console.log('radio checked', e.target.value);
+        setAmPm(e.target.value);
+    };
+
+    const onChangeHour = (value: string) => {
+        console.log(`selected ${value}`);
+    };
+
+    const onChangeMin = (value: string) => {
+        console.log(`selected ${value}`);
+    };
+
+    const onChangDate: DatePickerProps['onChange'] = (date, dateString) => {
+        console.log(date, dateString);
+    };
+
     return(
+        selectedOption === '해주세요' ?
         <WritePresenter 
             uploadButton={uploadButton}
             imageUrl={imageUrl}
@@ -68,6 +94,17 @@ export default function WriteContainer() {
             handleChange={handleChange}
             options={options}
             onClickBack={onClickBack}
+            onChangeAmPm={onChangeAmPm}
+            amPm={amPm}
+            onChangeHour={onChangeHour}
+            onChangeMin={onChangeMin}
+            onChangeOption={onChangeOption}
+            onChangDate={onChangDate}
+        /> :
+        <DiffWritePresenter
+            onChangeOption={onChangeOption}
+            options={options}
+            onChangDate={onChangDate}
         />
     )
 }
