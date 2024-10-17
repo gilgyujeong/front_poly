@@ -26,7 +26,7 @@ export default function MainPageContainer() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://koreanjson.com/posts/1');
+                const response = await axios.get('/api/post/list/All');
                     setData(response.data);
                     setLoading(false);
                 } catch (error: any) {
@@ -36,6 +36,8 @@ export default function MainPageContainer() {
         }
         fetchData();
     }, []);
+
+    console.log(data);
 
     return (
         <MainPagePresenter 
