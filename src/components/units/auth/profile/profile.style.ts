@@ -104,3 +104,15 @@ export const LinkButton = styled(Button)`
     font-weight: 17px;
     color: gray;
 `
+
+export const bannerBox = styled.div`
+    width: 300px;
+    height: 70px;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`
