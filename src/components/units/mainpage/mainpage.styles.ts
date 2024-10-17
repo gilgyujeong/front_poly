@@ -10,7 +10,7 @@ export const MainBox = styled.div`
     align-items: center;
     position: relative;
     top: 60px;
-    
+    padding-bottom: 60px;
 `
 export const Board = styled(Card)`
     background-color: #f0f0f0;
