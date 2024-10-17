@@ -35,6 +35,7 @@ export default function ProfilePresenter() {
             <S.InputBox>
                 <S.LinkButton>리뷰 목록</S.LinkButton>
             </S.InputBox>
+            <S.bannerBox>광 고</S.bannerBox>
         </S.MainBox>
     )
 }

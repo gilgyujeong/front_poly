@@ -24,6 +24,7 @@ export default function DetailPresenter(props: DetailPresenterProps) {
             <S.Line></S.Line>
             <S.ContentsBox>게시글 내용</S.ContentsBox>
             <S.DateBox>2024-10-24</S.DateBox>
+            <S.TimeBox>AM 11:20</S.TimeBox>
             <S.LocationBox>대구 평리동</S.LocationBox>
             <S.BoardButton type='primary'>요청</S.BoardButton>
             <S.BoardButton onClick={props.onClickBack}>뒤로</S.BoardButton>

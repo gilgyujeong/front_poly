@@ -4,11 +4,11 @@ import { Image, Carousel, Button } from "antd";
 export const MainBox = styled.div`
     background-color: #e6f7ff;
     width: 100%;
-    height: 620px;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    padding-bottom: 70px;
     top: 60px;
 `
 
@@ -69,6 +69,16 @@ export const DateBox = styled.div`
 `
 
 export const LocationBox = styled.div`
+    width: 300px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 4px 10px;
+    border: 2px solid lightblue;
+    background-color: white;
+`
+export const TimeBox = styled.div`
     width: 300px;
     height: 30px;
     font-size: 13px;
