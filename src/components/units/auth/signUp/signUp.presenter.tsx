@@ -17,6 +17,9 @@ export default function SignUpPresenter(props: any) {
                 <Input placeholder="비밀번호를 다시 입력해주세요" type="password" />
             </AS.InputBox>
             <AS.InputBox>
+                <Input placeholder='별칭을 입력해주세요.' type="text"></Input>
+            </AS.InputBox>
+            <AS.InputBox>
                 <Input placeholder="이메일을 입력해주세요" />
             </AS.InputBox>
             <AS.InputBox>

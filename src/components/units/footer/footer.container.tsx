@@ -27,7 +27,6 @@ export default function FooterContainer() {
 
     const onClickLocation = () => {
         if (!geolocation.error) {
-            // alert(`위도: ${geolocation.latitude} 경도: ${geolocation.longitude}`)
             router.push('/kakaoMap')
         }
     }
