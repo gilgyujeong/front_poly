@@ -1,4 +1,4 @@
-import { EllipsisOutlined, HeartOutlined, CommentOutlined } from '@ant-design/icons';
+import { EllipsisOutlined, HeartOutlined, CommentOutlined, UserOutlined } from '@ant-design/icons';
 import * as S from './mainpage.styles'
 import { Avatar, Card } from 'antd';
 const { Meta } = Card;
@@ -23,7 +23,7 @@ export default function MainPagePresenter(props: any) {
                     ]}
             >
                 <Meta
-                avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />}
+                avatar={<Avatar icon={<UserOutlined />} />}
                 title={props.data.title}
                 description='10000원'
                 />
@@ -42,7 +42,7 @@ export default function MainPagePresenter(props: any) {
                 ]}
             >
                 <Meta
-                avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />}
+                avatar={<Avatar icon={<UserOutlined />} />}
                 title={props.data.title}
                 description='10000원'
                 />
@@ -61,7 +61,7 @@ export default function MainPagePresenter(props: any) {
                     ]}
             >
                 <Meta
-                avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />}
+                avatar={<Avatar icon={<UserOutlined />} />}
                 title={props.data.title}
                 description='10000원'
                 />
