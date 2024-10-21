@@ -26,7 +26,7 @@ export default function MainPageContainer() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('api/post/list');
+                const response = await axios.get('/api/post/list');
                     setData(response.data);
                     setLoading(false);
                 } catch (error: any) {

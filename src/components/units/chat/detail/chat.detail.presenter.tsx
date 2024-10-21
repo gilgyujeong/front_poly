@@ -1,6 +1,6 @@
 import * as S from './chat.detail.styles'
 
-export default function ChatDetailPresenter() {
+export default function ChatDetailPresenter(props: any) {
     return (
         <S.MainBox>
             <S.WriteBox>
